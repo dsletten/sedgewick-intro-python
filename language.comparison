@@ -1,0 +1,159 @@
+================================================================================
+250108 水
+String concatenation
+1. Common Lisp
+  (concatenate 'string "foo" "bar") ; Strings only
+  (format nil "~D ~A" 8 "monkeys")
+2. Oz
+  {Append "foo" "bar"}
+3. Smalltalk
+
+4. Io
+  5 .. " golden rings"
+5. Java
+  3 + " apples" // toString()
+6. JavaScript
+  9 + " pungs"
+7. Ruby
+  8.to_s + " monkeys"
+8. Python
+  str(8) + " monkeys"
+9. C++
+
+10. Dylan
+================================================================================
+250113 月
+Number -> String
+String -> Number
+1. Common Lisp
+  (write-to-string x)
+  (format nil "~D" 8)
+  (parse-integer "8")
+  (read-from-string "9.2")
+2. Oz
+   StringToInt
+   StringToFloat
+   IntToString
+   FloatToString
+3. Smalltalk
+
+4. Io
+
+5. Java
+    Double.parseDouble(s)
+    Double.toString(x)
+6. JavaScript
+    Number(s) [new Number(s)]
+    n.toString()
+    .toExponential()
+    .toFixed()
+    .toPrecision()
+7. Ruby
+    .to_i
+    .to_f
+    .to_s
+8. Python
+  str(8)
+  int('88') => 88
+  float('88.2') => 88.2
+  float(88) => 88.0
+  int(2.3) => 2  
+9. C++
+https://www.geeksforgeeks.org/convert-string-to-int-in-cpp/
+stoi()
+atoi()
+sscanf()
+..
+stod()
+
+10. Dylan
+string-to-integer("88")
+[string-to-float()] ??????
+integer-to-string()
+float-to-string()
+================================================================================
+250114 火
+Integer arithmetic operators
+1. Common Lisp (Arbitrary precision)
+   +-
+   + - * / (rational)
+   truncate floor mod rem expt
+2. Oz (Arbitrary precision)
+    ~
+   + - * div (truncate)
+   mod [rem] Pow
+3. Smalltalk (Arbitrary precision)
+    -
+   + - * / (rational)
+   % [mod] **
+4. Io
+    -
+   + - * / (float)
+   % [rem] **
+5. Java
+   +-
+   + - * / (truncate)
+   % [rem] BigInteger#pow()
+6. JavaScript
+   +-
+   + - * / (float)
+   % [rem] **
+7. Ruby (Arbitrary precision)
+   +-
+   + - * / (floor)
+   % [mod] **
+8. Python (Arbitrary precision)
+   +-
+   + - * // (floor)
+   % [mod] **
+9. C++
+   +-
+   + - * / (truncate)
+   % [rem] pow() <cmath>
+10. Dylan
+    negative
+   + - * /
+   truncate truncate/ floor floor/ modulo remainder
+================================================================================
+250116 木
+Floating-point arithmetic operators
+1. Common Lisp (double-float)
+   +-
+   + - * /
+   truncate floor mod rem expt
+2. Oz (double)
+    ~
+   + - * /
+   mod [rem] ??? Pow
+3. Smalltalk 
+    -
+   + - * /
+   % [mod] **
+4. Io (double)
+    -
+   + - * /
+   % [rem] **
+5. Java (double)
+   +-
+   + - * /
+   % [rem] Math.pow()
+6. JavaScript (double)
+   +-
+   + - * /
+   % [rem] **
+7. Ruby (double)
+   +-
+   + - * /
+   % [mod] **
+8. Python (double)
+   +-
+   + - * /
+   % [mod] **
+9. C++ (double)
+   +-
+   + - * /
+   fmod() [rem] pow() <cmath>
+10. Dylan
+    negative
+   + - * /
+   truncate truncate/ floor floor/ modulo remainder   
