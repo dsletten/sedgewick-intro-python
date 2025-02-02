@@ -111,8 +111,8 @@ Integer arithmetic operators
    + - * / (truncate)
    % [rem] pow() <cmath>
 10. Dylan
-    negative
-   + - * /
+   - negative
+   + - * truncate/ ^
    truncate truncate/ floor floor/ modulo remainder
 ================================================================================
 250116 木
@@ -156,4 +156,98 @@ Floating-point arithmetic operators
 10. Dylan
     negative
    + - * /
-   truncate truncate/ floor floor/ modulo remainder   
+   truncate truncate/ floor floor/ modulo remainder
+================================================================================
+250130 木
+Booleans
+1. Common Lisp
+   boolean t (all non-NIL values), nil
+   and or not
+2. Oz
+   true, false
+   And Or Not
+   andthen orelse
+3. Smalltalk 
+4. Io
+5. Java
+   boolean true, false Boolean
+   && || !
+6. JavaScript
+   boolean true, false
+   && || !
+7. Ruby true, false
+   && || !
+   and or
+8. Python
+   bool True, False
+   and or not
+9. C++
+10. Dylan
+   #t (all non-false values), #f
+   & | ~
+================================================================================
+250130 木
+Comparison operators
+1. Common Lisp
+   = /= < <= > >=
+2. Oz
+   == \= < =< > >=
+3. Smalltalk 
+
+4. Io
+   == != < <= > >=
+5. Java
+   == != < <= > >=
+6. JavaScript
+   == != < <= > >=
+7. Ruby true, false
+   == != < <= > >=
+8. Python
+   == != < <= > >=
+9. C++
+   == != < <= > >=
+10. Dylan
+   = ~= < <= > >=
+================================================================================
+250130 木
+Sample math functions
+1. Common Lisp
+   abs, max, min
+   sin, cos, tan, atan, (abs (complex x y)), exp, expt, ln, log, sqrt, sinh, cosh, ...
+   random
+2. Oz
+
+3. Smalltalk 
+
+4. Io
+5. Java
+   Math.abs, max, min
+   Math.sin, cos, tan, atan2, hypot, toRadians, toDegrees, exp, log, log10, sqrt, pow, sinh, cosh, ...
+6. JavaScript
+7. Ruby true, false
+8. Python
+   abs, max, min
+   math.sin, cos, tan, atan2, hypot, radians, degrees, exp, log(x, b), sqrt, erf, gamma
+   random.random, randrange
+9. C++
+10. Dylan
+================================================================================
+250131 金
+Character type?
+1. Common Lisp
+   #\a
+2. Oz
+   &a
+3. Smalltalk 
+
+4. Io
+5. Java
+   'a' (Broken Unicode)
+6. JavaScript
+7. Ruby true, false
+8. Python
+9. C++
+   'a'
+10. Dylan
+    'a'
+    
