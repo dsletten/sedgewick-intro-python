@@ -21,6 +21,8 @@ String concatenation
 9. C++
 
 10. Dylan
+11. Lua
+   "foo" .. "bar"
 ================================================================================
 250113 月
 Number -> String
@@ -38,39 +40,44 @@ String -> Number
 3. Smalltalk
 
 4. Io
-
+   asNumber
 5. Java
-    Double.parseDouble(s)
-    Double.toString(x)
+   Double.parseDouble(s)
+   Double.toString(x)
 6. JavaScript
-    Number(s) [new Number(s)]
-    n.toString()
-    .toExponential()
-    .toFixed()
-    .toPrecision()
+   Number(s) [new Number(s)]
+   n.toString()
+   .toExponential()
+   .toFixed()
+   .toPrecision()
 7. Ruby
-    .to_i
-    .to_f
-    .to_s
+   Integer()
+   Float()
+   .to_i
+   .to_f
+   .to_s
 8. Python
-  str(8)
-  int('88') => 88
-  float('88.2') => 88.2
-  float(88) => 88.0
-  int(2.3) => 2  
+   str(8)
+   int('88') => 88
+   float('88.2') => 88.2
+   float(88) => 88.0
+   int(2.3) => 2  
 9. C++
 https://www.geeksforgeeks.org/convert-string-to-int-in-cpp/
-stoi()
-atoi()
-sscanf()
+   stoi()
+   atoi()
+   sscanf()
 ..
-stod()
+   stod()
 
 10. Dylan
-string-to-integer("88")
-[string-to-float()] ??????
-integer-to-string()
-float-to-string()
+    string-to-integer("88")
+    [string-to-float()] ??????
+    integer-to-string()
+    float-to-string()
+11. Lua
+    tostring(x)
+    tonumber(s[, b])
 ================================================================================
 250114 火
 Integer arithmetic operators
@@ -114,10 +121,15 @@ Integer arithmetic operators
    - negative
    + - * truncate/ ^
    truncate truncate/ floor floor/ modulo remainder
+11. Lua
+   -
+   + - * /
+   % [mod] math.fmod(m, n) [rem] ^
+   math.floor math.ceil math.modf(m, n) [truncate]
 ================================================================================
 250116 木
 Floating-point arithmetic operators
-1. Common Lisp (double-float)
+1. Common Lisp (single-float, double-float)
    +-
    + - * /
    truncate floor mod rem expt
@@ -133,7 +145,7 @@ Floating-point arithmetic operators
     -
    + - * /
    % [rem] **
-5. Java (double)
+5. Java (float, double)
    +-
    + - * /
    % [rem] Math.pow()
@@ -149,14 +161,19 @@ Floating-point arithmetic operators
    +-
    + - * /
    % [mod] **
-9. C++ (double)
+9. C++ (float, double)
    +-
    + - * /
    fmod() [rem] pow() <cmath>
-10. Dylan
+10. Dylan (single-float, double-float)
     negative
    + - * /
    truncate truncate/ floor floor/ modulo remainder
+11. Lua
+   -
+   + - * /
+   % [mod] math.fmod(m, n) [rem] ^
+   math.floor math.ceil math.modf(m, n) [truncate]
 ================================================================================
 250130 木
 Booleans
@@ -169,6 +186,7 @@ Booleans
    andthen orelse
 3. Smalltalk 
 4. Io
+   and or not
 5. Java
    boolean true, false Boolean
    && || !
@@ -185,6 +203,9 @@ Booleans
 10. Dylan
    #t (all non-false values), #f
    & | ~
+11. Lua
+    true false
+    and or not
 ================================================================================
 250130 木
 Comparison operators
@@ -194,7 +215,7 @@ Comparison operators
    == \= < =< > >=
 3. Smalltalk 
 
-4. Io
+4. Io (compare())
    == != < <= > >=
 5. Java
    == != < <= > >=
@@ -208,6 +229,8 @@ Comparison operators
    == != < <= > >=
 10. Dylan
    = ~= < <= > >=
+11. Lua
+   == ~= < <= > >=
 ================================================================================
 250130 木
 Sample math functions
@@ -231,6 +254,10 @@ Sample math functions
    random.random, randrange
 9. C++
 10. Dylan
+11. Lua
+    math.abs, math.max, math.min
+    math.sin, ...
+    math.sqrt, math.log(x[, b])
 ================================================================================
 250131 金
 Character type?
@@ -244,10 +271,10 @@ Character type?
 5. Java
    'a' (Broken Unicode)
 6. JavaScript
-7. Ruby true, false
+7. Ruby
 8. Python
 9. C++
    'a'
 10. Dylan
     'a'
-    
+11. Lua

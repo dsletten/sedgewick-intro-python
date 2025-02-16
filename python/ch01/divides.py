@@ -13,7 +13,6 @@
 #      250202 Original.
 #
 
-import math
 import sys
 import stdio
 
